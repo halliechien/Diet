@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hallie.diet.Record"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_breakfast" />
+
+        <ImageButton
+            style="@style/btn_icon"
+            android:src="@drawable/icon_camera"
+            android:layout_weight="1"
+            android:paddingLeft="80dp"
+            android:onClick="click_camera"/>
+
+        <ImageButton
+            style="@style/btn_icon"
+            android:src="@drawable/icon_add"
+            android:onClick="click_add"
+            android:paddingLeft="10dp" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/diet_blue_dark">
+
+        <TableRow>
+            <TextView
+                style="@style/table_th"
+                android:text="熱量"/>
+            <TextView
+                style="@style/table_th"
+                android:text="碳水"/>
+            <TextView
+                style="@style/table_th"
+                android:text="蛋白質"/>
+            <TextView
+                style="@style/table_th"
+                android:text="脂肪"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/table_th"
+                android:text="0"/>
+            <TextView
+                style="@style/table_th"
+                android:text="0"/>
+            <TextView
+                style="@style/table_th"
+                android:text="0"/>
+            <TextView
+                style="@style/table_th"
+                android:text="0"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/diet_gray_bg"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/li_tr"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:text="2項" />
+
+            <ImageButton
+                android:id="@+id/btn_displayArrow"
+                style="@style/btn_icon"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_arrow_left"
+                android:onClick="click_display"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/diet_gray_light" />
+
+        <LinearLayout
+            android:id="@+id/ly_displayBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="6dp"
+            android:paddingLeft="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/li_th"
+                    android:text="咖啡"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/et_qty"
+                    style="@style/ed_number"
+                    android:layout_toLeftOf="@+id/tv_unit"
+                    android:text="1"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    style="@style/li_th"
+                    android:text="杯"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TableRow >
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="熱量" />
+
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="碳水" />
+
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="蛋白質" />
+
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="脂肪" />
+                </TableRow>
+                <TableRow >
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="0" />
+
+                    <TextView
+                        style="@style/table_tr"
+                        android:text="0" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/diet_gray_light" />
+            </TableLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

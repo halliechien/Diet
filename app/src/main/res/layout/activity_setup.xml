@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hallie.diet.Setup"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <EditText
+        style="@style/ed_text"
+        android:text="新增餐點"/>
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title_class"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/diet_gray_bg"
+        android:paddingRight="6dp"
+        android:paddingLeft="6dp">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <EditText
+            style="@style/ed_text"
+            android:text="新增類別"/>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/title_data"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/diet_gray_bg"
+        android:paddingRight="6dp"
+        android:paddingLeft="6dp">
+
+        <TableRow>
+            <TextView
+                style="@style/li_tr"
+                android:text="熱量：" />
+
+            <EditText
+                style="@style/ed_number"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/li_tr"
+                android:text="大卡" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/li_tr"
+                android:text="碳水化合物：" />
+
+            <EditText
+                style="@style/ed_number"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/li_tr"
+                android:text="g" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/li_tr"
+                android:text="蛋白質：" />
+
+            <EditText
+                style="@style/ed_number"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/li_tr"
+                android:text="g" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                style="@style/li_tr"
+                android:text="脂肪：" />
+
+            <EditText
+                style="@style/ed_number"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/li_tr"
+                android:text="g" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            style="@style/btn_style"
+            android:layout_weight="1"
+            android:text="取消"
+            android:onClick="click_cancel"/>
+
+        <Button
+            style="@style/btn_style"
+            android:text="確定"
+            android:layout_weight="1"
+            android:onClick="click_ok"/>
+    </LinearLayout>
+</LinearLayout>

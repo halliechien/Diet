@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hallie.diet.Myinfo_A"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="女"
+                android:gravity="center"/>
+
+            <ImageView
+                style="@style/iv_gender"
+                android:src="@drawable/head_girl"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="身高："/>
+            <TextView
+                style="@style/li_th"
+                android:text="160"
+                android:gravity="center"/>
+            <TextView
+                style="@style/li_th"
+                android:text="cm"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="體重："/>
+            <TextView
+                style="@style/li_th"
+                android:text="60"
+                android:gravity="center"/>
+            <TextView
+                style="@style/li_th"
+                android:text="kg"/>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="BMI："/>
+            <TextView
+                style="@style/li_th"
+                android:text="1160"
+                android:gravity="center"/>
+
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="每日熱量需求："
+                android:layout_span="3"/>
+            <TextView
+                style="@style/li_th"
+                android:text="1660"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_dark"/>
+            <TextView
+                style="@style/li_th"
+                android:text="大卡"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        style="@style/btn_style"
+        android:text="修改"/>
+
+
+</LinearLayout>

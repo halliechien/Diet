@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">飲食日記</string>
+    <string name="title_record">每日紀錄</string>
+    <string name="title_mealtype">飲食類別</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

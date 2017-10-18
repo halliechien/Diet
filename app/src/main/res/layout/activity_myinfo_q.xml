@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.hallie.diet.Myinfo_Q">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            style="@style/li_th"
+            android:buttonTint="@color/diet_gray_dark"
+            android:text="女" />
+
+        <ImageView
+            style="@style/iv_gender"
+            android:src="@drawable/head_girl" />
+
+        <RadioButton
+            style="@style/li_th"
+            android:layout_marginLeft="16dp"
+            android:buttonTint="@color/diet_gray_dark"
+            android:text="男" />
+
+        <ImageView
+            style="@style/iv_gender"
+            android:src="@drawable/head_boy" />
+    </RadioGroup>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="身高：" />
+
+            <EditText
+                style="@style/ed_number"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/li_th"
+                android:text="cm" />
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="10dp">
+            <TextView
+                style="@style/li_th"
+                android:text="體重：" />
+
+            <EditText
+                style="@style/ed_number"
+                android:layout_weight="1"/>
+
+            <TextView
+                style="@style/li_th"
+                android:text="kg" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        style="@style/li_th"
+        android:layout_marginBottom="10dp"
+        android:text="活動量：" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp">
+
+        <RadioButton
+            style="@style/li_tr"
+            android:layout_marginBottom="6dp"
+            android:text="輕度(辦公室工作、家務)" />
+
+        <RadioButton
+            style="@style/li_tr"
+            android:layout_marginBottom="6dp"
+            android:text="中度(站立工作、快車、騎單車)" />
+
+        <RadioButton
+            style="@style/li_tr"
+            android:layout_marginBottom="6dp"
+            android:text="重度(搬運工作、重訓、跑步)" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            style="@style/btn_style"
+            android:layout_weight="1"
+            android:text="取消"
+            android:onClick="click_cancel"/>
+
+        <Button
+            style="@style/btn_style"
+            android:text="確定"
+            android:layout_weight="1"
+            android:onClick="click_ok"/>
+
+
+    </LinearLayout>
+</LinearLayout>
