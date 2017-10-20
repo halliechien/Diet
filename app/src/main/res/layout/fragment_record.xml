@@ -1,0 +1,185 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hallie.diet.RecordFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/diet_blue_dark">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/table_th"
+                    android:text="熱量" />
+
+                <TextView
+                    style="@style/table_th"
+                    android:text="碳水" />
+
+                <TextView
+                    style="@style/table_th"
+                    android:text="蛋白質" />
+
+                <TextView
+                    style="@style/table_th"
+                    android:text="脂肪" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/totalCalorie"
+                    style="@style/table_th"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/totalCarbon"
+                    style="@style/table_th"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/totalProtein"
+                    style="@style/table_th"
+                    android:text="0" />
+
+                <TextView
+                    android:id="@+id/totalFat"
+                    style="@style/table_th"
+                    android:text="0" />
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/diet_gray_bg"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/totalItem"
+                    style="@style/li_tr"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="2項" />
+
+                <ImageButton
+                    android:id="@+id/ibtn_displayArrow"
+                    style="@style/btn_icon"
+                    android:layout_alignParentRight="true"
+                    android:onClick="click_display"
+                    android:src="@drawable/icon_arrow_left" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/diet_gray_light" />
+
+            <LinearLayout
+                android:id="@+id/ly_displayBlock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        style="@style/li_th"
+                        android:layout_centerVertical="true"
+                        android:text="咖啡" />
+
+                    <EditText
+                        android:id="@+id/et_qty"
+                        style="@style/ed_number"
+                        android:layout_toLeftOf="@+id/tv_unit"
+                        android:gravity="center"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/tv_unit"
+                        style="@style/li_th"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="杯" />
+
+                </RelativeLayout>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/table_tr"
+                            android:text="熱量" />
+
+                        <TextView
+                            style="@style/table_tr"
+                            android:text="碳水" />
+
+                        <TextView
+                            style="@style/table_tr"
+                            android:text="蛋白質" />
+
+                        <TextView
+                            style="@style/table_tr"
+                            android:text="脂肪" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/foodCalorie"
+                            style="@style/table_tr"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/foodCarbon"
+                            style="@style/table_tr"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/foodProtein"
+                            style="@style/table_tr"
+                            android:text="0" />
+
+                        <TextView
+                            android:id="@+id/foodFat"
+                            style="@style/table_tr"
+                            android:text="0" />
+                    </TableRow>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/diet_gray_light" />
+                </TableLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
