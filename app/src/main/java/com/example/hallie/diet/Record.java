@@ -22,7 +22,7 @@ public class Record extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
 
-        mimgArrow = (ImageButton) findViewById(R.id.btn_displayArrow);
+        mimgArrow = (ImageButton) findViewById(R.id.ibtn_displayArrow);
         mlyBlock = (LinearLayout) findViewById(R.id.ly_displayBlock);
 
         mimgArrow.setOnClickListener(new MyTurnListener());  //翻轉監聽
