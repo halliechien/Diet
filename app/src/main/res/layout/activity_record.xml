@@ -9,181 +9,115 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/title_breakfast" />
+            android:src="@drawable/title_breakfast"
+            android:layout_centerVertical="true"/>
 
         <ImageButton
+            android:id="@+id/ibtn_camera"
             style="@style/btn_icon"
+            android:layout_toLeftOf="@+id/ibtn_addBreakfast"
+            android:onClick="click_camera"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/icon_camera"
-            android:layout_weight="1"
-            android:paddingLeft="80dp"
-            android:onClick="click_camera"/>
+            android:layout_centerVertical="true"/>
 
         <ImageButton
+            android:id="@+id/ibtn_addBreakfast"
             style="@style/btn_icon"
-            android:src="@drawable/icon_add"
+            android:layout_alignParentRight="true"
             android:onClick="click_add"
-            android:paddingLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_add"
+            android:layout_centerVertical="true"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-    <TableLayout
+    <fragment
+        android:name="com.example.hallie.diet.RecordFragment"
+        android:id="@+id/breakfast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/diet_blue_dark">
+        tools:layout="@layout/fragment_record"/>
 
-        <TableRow>
-            <TextView
-                style="@style/table_th"
-                android:text="熱量"/>
-            <TextView
-                style="@style/table_th"
-                android:text="碳水"/>
-            <TextView
-                style="@style/table_th"
-                android:text="蛋白質"/>
-            <TextView
-                style="@style/table_th"
-                android:text="脂肪"/>
-        </TableRow>
-        <TableRow>
-            <TextView
-                style="@style/table_th"
-                android:text="0"/>
-            <TextView
-                style="@style/table_th"
-                android:text="0"/>
-            <TextView
-                style="@style/table_th"
-                android:text="0"/>
-            <TextView
-                style="@style/table_th"
-                android:text="0"/>
-        </TableRow>
-    </TableLayout>
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/diet_gray_bg"
-        android:orientation="vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/li_tr"
-                android:layout_height="40dp"
-                android:gravity="center_vertical"
-                android:text="2項" />
-
-            <ImageButton
-                android:id="@+id/btn_displayArrow"
-                style="@style/btn_icon"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/icon_arrow_left"
-                android:onClick="click_display"/>
-
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/diet_gray_light" />
-
-        <LinearLayout
-            android:id="@+id/ly_displayBlock"
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingRight="6dp"
-            android:paddingLeft="6dp">
+            android:src="@drawable/title_lunch"
+            android:layout_centerVertical="true"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+        <ImageButton
 
-                <TextView
-                    style="@style/li_th"
-                    android:text="咖啡"
-                    android:layout_centerVertical="true"/>
+            style="@style/btn_icon"
+            android:layout_toLeftOf="@+id/ibtn_addLunch"
+            android:onClick="click_camera"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_camera"
+            android:layout_centerVertical="true"/>
 
-                <EditText
-                    android:id="@+id/et_qty"
-                    style="@style/ed_number"
-                    android:layout_toLeftOf="@+id/tv_unit"
-                    android:text="1"
-                    android:gravity="center"/>
+        <ImageButton
+            android:id="@+id/ibtn_addLunch"
+            style="@style/btn_icon"
+            android:layout_alignParentRight="true"
+            android:onClick="click_add"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_add"
+            android:layout_centerVertical="true"/>
 
-                <TextView
-                    android:id="@+id/tv_unit"
-                    style="@style/li_th"
-                    android:text="杯"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
-            </RelativeLayout>
+    <fragment
+        android:name="com.example.hallie.diet.RecordFragment"
+        android:id="@+id/lunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_record"/>
 
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-                <TableRow >
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="熱量" />
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/title_dinner"
+            android:layout_centerVertical="true"/>
 
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="碳水" />
+        <ImageButton
 
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="蛋白質" />
+            style="@style/btn_icon"
+            android:layout_toLeftOf="@+id/ibtn_addDinner"
+            android:onClick="click_camera"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_camera"
+            android:layout_centerVertical="true"/>
 
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="脂肪" />
-                </TableRow>
-                <TableRow >
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="0" />
+        <ImageButton
+            android:id="@+id/ibtn_addDinner"
+            style="@style/btn_icon"
+            android:layout_alignParentRight="true"
+            android:onClick="click_add"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/icon_add"
+            android:layout_centerVertical="true"/>
 
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="0" />
-
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="0" />
-
-                    <TextView
-                        style="@style/table_tr"
-                        android:text="0" />
-                </TableRow>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/diet_gray_light" />
-            </TableLayout>
-        </LinearLayout>
-
-    </LinearLayout>
-
-
+    </RelativeLayout>
 
 
 
